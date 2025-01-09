@@ -349,6 +349,7 @@ p {
 .carCreator p {
     text-align: center;
     margin-top: -0.6em;
+    font-size: 20px;
 }
 
 .carDesc {
@@ -386,6 +387,7 @@ p {
 
 .carDesc > article > p {
     align-self: flex-start;
+    font-size: 20px;
 }
 
 /* homepage */
@@ -698,15 +700,20 @@ p {
     margin-left: 4em;
 }
 
+.aboutRich article p {
+    font-size: 20px;
+}
+
 .aboutRich article h2, .mission article h2, .aboutMain h2 {
     font-size: 40px;
     color: #f5f5f5;
 }
 
 #richImage {
-    max-width: 50%;
+    width: 100%;
     display: flex;
     border-radius: 50px;
+    height: 75vh;
 }
 
 .mission {
@@ -726,6 +733,7 @@ p {
     /* max-width: 1em; */
     text-wrap: wrap;
     margin: 5em 3em 0 0;
+    font-size: 20px;
 }
 
 .mission article {
@@ -1423,7 +1431,7 @@ button:focus{
 .conciergeMain form {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30em;
+    margin-top: 31.8em;
 }
 
 #cart-main hr{
@@ -1835,5 +1843,8 @@ button:focus{
     }
     .carDesc{
         flex-direction: column;
+    }
+    #richImage {
+        height: 50%;
     }
 }
