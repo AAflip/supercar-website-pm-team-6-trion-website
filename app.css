@@ -102,6 +102,11 @@ nav > ul{
     display: flex;
 }
 
+#right a:hover, #right a:focus{
+    opacity: 0.5;
+    transition: opacity 200ms;
+}
+
 .icons{
     margin: 0 0.7em;
 }
@@ -163,8 +168,8 @@ nav > ul{
 }
 
 .media-icons img:hover, .media-icons img:focus{
-    background-color: #2C2C2C;
-    transition: background-color 200ms;
+    opacity: 0.5;
+    transition: opacity 200ms;
 }
 
 input[type="submit"]{
@@ -287,6 +292,8 @@ p {
     width: 100%;
     align-self: center;
     max-height: 95vh;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .carHero h2 {
@@ -474,6 +481,11 @@ p {
     margin-top: 10em;
 }
 
+.home-desc > a > img{
+    border-radius: 16px;
+    border: 4px solid #FCC900;
+}
+
 .home-desc article{
     display: flex;
     flex-direction: column;
@@ -494,6 +506,7 @@ p {
 
 .home-desc p{
     font-size: 23px;
+    text-align: center;
 }
 
 .home-desc > article img{
@@ -510,7 +523,7 @@ p {
   overflow: hidden;
   position: relative;
   margin: 4.7em auto 0;
-  width: 100vw; 
+  width: 99vw; 
   height: 55em;
   background-color: black;
 }
@@ -523,7 +536,7 @@ p {
 .option {
   overflow: hidden;
   position: absolute;  
-  transform: skewX(-60.9454deg);
+  transform: skewX(-66.9453959deg);
   background-image: url("images/background-img.webp");
 }
 
@@ -547,7 +560,7 @@ p {
 }
 
 .option img, .option:after {
-  transform: skewX(60.9454deg);
+  transform: skewX(66.9453959deg);
   transform-origin: inherit;
 }
 
@@ -1608,7 +1621,7 @@ button:focus{
     visibility: hidden;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1400px){
     .option, .option img, .pageOption{
         transform: none;
         position: relative;
