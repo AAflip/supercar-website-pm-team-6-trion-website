@@ -333,7 +333,7 @@ p {
     border-radius: 50px;
     border: 3px solid #FCC900;
     width: 90%;
-    margin: 0 0em 0 0em;
+    margin: 0.5em 0 3em 0;
 }
 
 .carCreator .button {
@@ -348,8 +348,9 @@ p {
 
 .carCreator p {
     text-align: center;
-    margin-top: -0.6em;
-    font-size: 20px;
+    margin-top: -0.3em;
+    margin-bottom: 0.5em;
+    font-size: 25px;
 }
 
 .carDesc {
@@ -387,7 +388,7 @@ p {
 
 .carDesc > article > p {
     align-self: flex-start;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* homepage */
@@ -486,6 +487,11 @@ p {
 .home-desc > a > img{
     border-radius: 16px;
     border: 4px solid #FCC900;
+    transition: opacity 600ms;
+}
+
+.home-desc > a > img:hover, .home-desc > a > img:focus{
+    opacity: 0.8;
 }
 
 .home-desc article{
@@ -702,11 +708,11 @@ p {
 }
 
 .aboutRich article p {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .aboutRich article h2, .mission article h2, .aboutMain h2 {
-    font-size: 40px;
+    font-size: 45px;
     color: #f5f5f5;
 }
 
@@ -719,8 +725,14 @@ p {
 
 .mission {
     display: flex;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+.mission h2{
+    margin-bottom: 0;
 }
 
 .missionHeading {
@@ -728,13 +740,21 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: fit-content;
 }
 
 .missionText{
-    /* max-width: 1em; */
-    text-wrap: wrap;
-    margin: 5em 3em 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 20px;
+    width: 35%;
+}
+
+.missionText p{
+    padding-left: 1em;
+    font-size: 25px;
+    margin: 2em 0;
 }
 
 .mission article {
@@ -747,7 +767,7 @@ p {
 }
 
 .aboutMain hr {
-    width: 99.92%;
+    width: 97%;
     margin-top: 2em;
 }
 
@@ -784,6 +804,7 @@ p {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 2em;
 }
 
 h6 {
@@ -1108,12 +1129,9 @@ input {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-#big-boy{
-    min-width: 50vw;
-}
-
-#big-boy img{
-    min-width: 50vw;
+#middleBoy{
+    margin: auto;
+    margin-bottom: 3em;
 }
 
 .shop-card{
