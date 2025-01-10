@@ -167,7 +167,7 @@ nav > ul{
     margin-left: 0;
 }
 
-.media-icons img:hover, .media-icons img:focus{
+.media-icons img:hover, .media-icons a:focus{
     opacity: 0.5;
     transition: opacity 200ms;
 }
@@ -481,25 +481,25 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 10em;
 }
 
-.home-desc > a > img{
+.home-desc > div > a > img{
     border-radius: 16px;
     border: 4px solid #FCC900;
+    max-width: 900px;
     transition: opacity 600ms;
 }
 
 .home-desc > a > img:hover, .home-desc > a > img:focus{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .home-desc article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #f5f5f5;
     max-width: 900px;
+    margin-left: 3em;
 }
 
 .home-desc h2{
@@ -508,18 +508,17 @@ p {
     margin-bottom: 0.1em;
 }
 
-.home-desc hr{
-    width: 100%;
+.home-desc div{
+    display: flex;
 }
 
 .home-desc p{
     font-size: 23px;
-    text-align: center;
 }
 
-.home-desc > article img{
-    max-height: 160px;
-    margin: 3em 0 6em 0;
+.home-desc > img{
+    max-height: 100px;
+    margin: 4em 0 2em 0;
 }
 
 .active{
