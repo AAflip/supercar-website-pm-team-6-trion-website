@@ -326,6 +326,10 @@ p {
     display: flex;
     flex-direction: column;
     margin-top: 4em;
+    background-image: url("/images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 90.2% 40%;
 }
 
 .carCreator img {
