@@ -404,7 +404,7 @@ p {
 
 .hero{
     text-indent: -9999px;
-    background-image: url("images/KS_config_hanger.png");
+    background-image: url("images/KS_config_hanger2.jpg");
     padding: 45vh 1vw;
     background-position: center;
     background-attachment: fixed;
@@ -795,7 +795,7 @@ p {
 .aboutTeam article {
     display: flex;
     flex-direction:column;
-    width: 25%;
+    width: 31em;
     align-items: center;
     margin-bottom: 2em;
 }

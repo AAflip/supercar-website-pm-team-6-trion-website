@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/app.css">
-    <script src="carting.js"></script>
     <title>Trion Concierge Service</title>
 </head>
 <body>
@@ -96,5 +95,9 @@
     <aside class="to-top">
         <a href="#top"><img src="/images/up-arrow.png" alt="Arrow To Top"></a>
     </aside>
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", (e) => e.preventDefault());
+    </script>
 </body>
 </html>
