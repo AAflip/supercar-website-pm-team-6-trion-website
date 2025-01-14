@@ -415,6 +415,9 @@ p {
 
 .card{
     display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    align-items: center;
     margin-top: 5em;
     background-position: center;
     background-size: 100% 100%;
@@ -423,12 +426,12 @@ p {
 
 .card-left{
     background-image: url("images/cardL-background.png");
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 }
 
 .card-right{
     background-image: url("images/cardR-background.png");
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 }
 
 .card-text{
@@ -438,13 +441,13 @@ p {
     color:#f5f5f5;
     text-align: left;
     max-width: 550px;
-    margin-left: 15%;
-    margin-right: 15em;
+    /* margin-left: 15vw;
+    margin-right: 15vw; */
 }
 
 .card-right .card-text{
-    margin-left: 15em;
-    margin-right: 16em;
+    /* margin-left: 15vw;
+    margin-right: 16vw; */
 }
 
 .card-text h2{
@@ -479,8 +482,9 @@ p {
 .card img{
     border-radius: 50px;
     border: 3px solid #FCC900;
-    max-height: 400px;
-    width: 42%
+    width: 30%;
+    height: 40vh;
+    object-fit: cover;
 }
 
 .home-desc{
@@ -1686,6 +1690,15 @@ margin-right: 1em;
         visibility: visible;
         margin: 0.5em 1em;
         position: unset;
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .home-desc div{
+        flex-direction: column;
+    }
+    .home-desc{
+        width: 10px;
     }
 }
 
