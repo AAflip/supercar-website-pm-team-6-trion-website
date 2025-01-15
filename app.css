@@ -1657,16 +1657,22 @@ margin-right: 1em;
 #mobile-menu{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top:3em;
     background-color: #3F3F4C;
-    margin: 7em 1em;
+    height: 90vh;
 }
 
 #mobile-menu a{
     color: white;
     font-size: 50px;
     padding: 1em;
-    border: 1px solid #FCC900;
+    border-bottom: 3px solid #FCC900;
+    margin: 1em 0 0 0;
+    height: 
 }
+
+
 
 .disappear{
     position: absolute;
