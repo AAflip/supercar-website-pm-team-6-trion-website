@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/app.css">
     <title>Trion Customizer</title>
+    <script src="/carting.js"></script>
 </head>
 <body>
     <header>
@@ -54,11 +55,11 @@
                     <h2 class="disappear clear">option stuff</h2>
                     <section class="option-inner" id="paint">
                         <h2 class="disappear clear">paint stuff</h2>
-                        <a href="" class="colors-options" data-col='#FF0000'>Red</a>
-                        <a href="" class="colors-options" data-col='orange'>Orange</a>
-                        <a href="" class="colors-options" data-col='yellow'>Yellow</a>
-                        <a href="" class="colors-options" data-col='purple'>Purple</a>
-                        <a href="" class="colors-options" data-col='blue'>Blue</a>
+                        <button onclick="getColors()" class="colors-options" data-col='#FF0000'>Red</button>
+                        <button class="colors-options" data-col='orange'>Orange</button>
+                        <button class="colors-options" data-col='yellow'>Yellow</button>
+                        <button class="colors-options" data-col='purple'>Purple</button>
+                        <button class="colors-options" data-col='blue'>Blue</button>
                     </section>
                     <section id="calipers">
                         <h2 class="disappear clear">caliper stuff</h2>

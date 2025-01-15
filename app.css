@@ -1057,13 +1057,16 @@ input {
     flex-direction: column;
     margin-top: 2em;
 }
-.option-inner a{
+.option-inner button{
     text-align: center;
     align-self: center;
     width: 90%;
     padding: 2em 0;
     margin: 1em 0;
     border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 16px;
 }
 
 .colors-options{
