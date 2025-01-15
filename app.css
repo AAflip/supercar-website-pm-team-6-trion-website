@@ -440,14 +440,12 @@ p {
     justify-content: center;
     color:#f5f5f5;
     text-align: left;
-    max-width: 550px;
-    /* margin-left: 15vw;
-    margin-right: 15vw; */
+    max-width: 30vw;
+    padding-left: 15%;
 }
 
 .card-right .card-text{
-    /* margin-left: 15vw;
-    margin-right: 16vw; */
+    padding-left: 0;
 }
 
 .card-text h2{
@@ -502,7 +500,7 @@ p {
     transition: opacity 600ms;
 }
 
-.home-desc > a > img:hover, .home-desc > a > img:focus{
+.home-desc > div > a > img:hover, .home-desc > a > img:focus{
     opacity: 0.7;
 }
 
@@ -643,6 +641,8 @@ p {
 }
 
 #sideButton:hover, #frontButton:hover, #backButton:hover {
+    background-color: #12143b;
+    transition: background-color 250ms;
     cursor:pointer;
 }
 
@@ -1065,12 +1065,8 @@ input {
     margin: 1em 0;
     border-radius: 6px;
     border: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.colors-options{
-    background-color: orange;
+    font-size: 18px;
+    font-weight: 1000;
 }
 
 #confirm-config{
@@ -1081,8 +1077,13 @@ input {
     padding: 2em 0;
     background-color: #2C2C2C;
     border-top: 4px solid #FCC900;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
+    transition: background-color 200ms;
+}
+
+#confirm-config:hover, #confirm-config:focus{
+    background-color: #12143b;
 }
 
 #store-main{
@@ -1707,9 +1708,10 @@ margin-right: 1em;
 @media screen and (max-width: 1600px){
     .home-desc div{
         flex-direction: column;
-    }
-    .home-desc{
-        width: 10px;
+    } 
+    .home-desc article h2{
+        margin-left: 0.5em;
+        margin-bottom: 1em;
     }
 }
 
@@ -1787,6 +1789,7 @@ margin-right: 1em;
         background-position: -20vw -10vh;
         background-repeat: no-repeat;
         background-attachment: unset;
+        background-position: center;
         background-image: url("images/trionblacksupercar2\-1\-\(1\).png");
     }
     .card{
@@ -1807,6 +1810,7 @@ margin-right: 1em;
     }
     .card-text, .card-right .card-text{
         margin: 0 0 0 1em;
+        max-width: 550px;
     }
     .card-right{
         flex-direction: column-reverse;
@@ -1815,7 +1819,7 @@ margin-right: 1em;
         margin-bottom: 0.5em;
         align-self: flex-end;
     } 
-    .home-desc > a > img{
+    .home-desc > div > a > img{
         width: 100%;
     }
     .home-desc article img{
