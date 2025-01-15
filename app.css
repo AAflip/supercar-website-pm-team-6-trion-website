@@ -1703,6 +1703,16 @@ margin-right: 1em;
         margin: 0.5em 1em;
         position: unset;
     }
+    #product-main{
+        flex-direction: column;
+    }
+    #product-main > img{
+        margin: 0 0 2em 0;
+        width: 99%;
+    }
+    #product-stuff{
+        margin-left: 2em;
+    }
 }
 
 @media screen and (max-width: 1600px){
@@ -1810,6 +1820,7 @@ margin-right: 1em;
     }
     .card-text, .card-right .card-text{
         margin: 0 0 0 1em;
+        padding-left: 0;
         max-width: 550px;
     }
     .card-right{
