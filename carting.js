@@ -168,9 +168,6 @@ window.onload = function(){
         getColors();
     }
 
-    if(window.location.pathname == "/configurator/choice.html"){
-        diagonalSizer();
-    }
         // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') !== null) {
         let cartButtons = document.querySelectorAll('.addToCart');
@@ -200,8 +197,21 @@ function diagonalSizer(){
     option = document.getElementsByClassName("option");
     rotate = document.getElementsByClassName("rotate");
     // document.styleSheets[0].insertRule('.option:after',`transform: skewX(${degs-1}deg);`);
-    for (var i = 0; i < option.length; i++){
-        option[i].style.transform = `skewX(-${degs+1}deg)`;
-        rotate[i].style.transform = `skewX(${degs}deg)`;
+    if(window.screen.width > 1400){
+        for (var i = 0; i < option.length; i++){
+            option[i].style.transform = `skewX(-${degs+1}deg)`;
+            rotate[i].style.transform = `skewX(${degs}deg)`;
+        }
+    }else{
+        for (var i = 0; i < option.length; i++){
+            option[i].style.transform = "skewX(0deg)";
+            rotate[i].style.transform = "skewX(0deg)";
+        }
     }
 }
+
+window.onresize = function(){
+    if(window.location.pathname == "/configurator/choice.html"){
+        diagonalSizer();
+    }
+};
