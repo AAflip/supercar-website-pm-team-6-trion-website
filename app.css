@@ -2064,7 +2064,7 @@ button:focus{
         margin-bottom: 3em;
     }
 
-    #purchase {
+    #cart-stuff:last-child {
         margin-bottom: 7em;
     }
 
