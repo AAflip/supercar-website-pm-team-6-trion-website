@@ -210,8 +210,8 @@ function diagonalSizer(){
     }
 }
 
-window.onresize = function(){
-    if(window.location.pathname == "/configurator/choice.html"){
-        diagonalSizer();
-    }
-};
+// window.onresize = function(){
+//     if(window.location.pathname == "/configurator/choice.html"){
+//         diagonalSizer();
+//     }
+// };
