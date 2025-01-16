@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="app.css">
-    <script src="carting.js"></script>
-    <title>Trion Supercar Selector</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/app.css">
+    <title>Trion Customizer</title>
+    <script src="/carting.js"></script>
 </head>
-<body class="selectorBody">
+<body>
     <header>
         <nav>
             <ul id="desk-nav">
                 <li><a href="/"><img id="logo" src="/images/logo.png" alt="Trion Logo"></a></li>
                 <li><ul id="center">
-                    <li class="hoverer"><a class="button active" id="main-drop" href="/carSelector.html">Supercars</a>
+                    <li class="hoverer"><a class="button" id="main-drop" href="/carSelector.html">Supercars</a>
                         <ul class="dropdown">
                             <li><a class="button" href="/blackWidow.html">Black Widow</a></li>
                             <li><a class="button" href="/nemesisGT.html">Nemesis GT</a></li>
                             <li><a class="button" href="/nemesisRR.html">Nemesis RR</a></li>
                         </ul>
                     </li>
-                    <li><a class="button" href="/carSelectorCustom.html">Customizer</a></li>
+                    <li><a class="button active" href="/carSelectorCustom.html">Customizer</a></li>
                     <li><a class="button" href="/about.html">About Trion</a></li>
                     <li><a class="button" href="/merchandise/index.html">Merchandise</a></li>
                 </ul></li>
@@ -37,36 +37,38 @@
             </section>
         </nav>
     </header>
-    <main class="selectorMain">
-        <h1 id="carSelectorHeading">Meet the Supercars</h1>
-        <hr>
-        <section class="cars">
-            <h6 class="disappear">Trion Cars</h6>
-            <div >
-                <a href="/blackWidow.html"><img class="selection" src="/images/blackwidow-maybe.jpg" alt="Orange Black Widow car."></a>
-                <article class="selectionText">
-                    <h2>Black Widow</h2>
-                    <p>See the next generation of all-electric racing technology.</p>
-                </article>
-            </div>
-            <div>
-                <a href="/nemesisGT.html" id="nemesisGT"><img class="selection" src="/images/7_25-Lux-Black-Nemesis_rr-crop-1024x682.png" alt="Back of a Nemesis GT car."></a> 
-                <article class="selectionText">
-                    <h2>Nemesis GT</h2>
-                    <p>Drive in the future of all-electric luxury.</p>
-                </article>
-            </div>
-            <div class="nemesisRR">
-                <a href="/nemesisRR.html"><img class="selection" src="/images/yellow-1024x682.png" alt="Orange Black Widow car."></a>
-                <article class="selectionText">
-                    <h2>Nemesis RR</h2>
-                    <p>Witness one of the most powerful luxury vehicles on the market.</p>
-                </article>
-            </div>
+    <main id="config-main">
+        <img id="customCar" src="/images/7_25-Lux-Black-Nemesis_side-1024x575.png" style="transform: scale(-1, 1);" alt="Car Preview"><!--Make change color with arron method :)-->
+        <section id="config-all">
+            <h2 class="disappear">Configuration Sidebar</h2>
+            <section id="config-links">
+                <h2 class="disappear">Config Page Links</h2>
+                <a href="#paint">Paint Color</a>
+                <a href="#calipers">Calipers</a>
+                <a href="#windows">Window Tint</a>
+                <a href="#rims">Rims</a>
+                <a href="#others">Others</a>
+            </section>
+            <section id="config-bar">
+                <h2 class="disappear">Configuration options</h2>
+                <section id="config-options">
+                    <h2 class="disappear clear">option stuff</h2>
+                    <section class="option-inner" id="paint">
+                        <h2 class="disappear clear">paint stuff</h2>
+                        <button class="colors-options red" data-col='#FF0000'>Red</button>
+                        <button class="colors-options orange" data-col='orange'>Orange</button>
+                        <button class="colors-options yellow" data-col='yellow'>Yellow</button>
+                        <button class="colors-options purple" data-col='purple'>Purple</button>
+                        <button class="colors-options blue" data-col='blue'>Blue</button>
+                        <button class="colors-options green" data-col='green'>Green</button>
+                    </section>
+                    <section id="calipers">
+                        <h2 class="disappear clear">caliper stuff</h2>
+                    </section>
+                </section>
+                <a id="confirm-config" href="confirmationGT.html">Confirm Selection</a>
+            </section>
         </section>
-
-
-
     </main>
     <footer>
         <section id="desk-footer">
@@ -100,7 +102,7 @@
                     <input type="submit" value="Submit">
                 </article>
                 <article class="media-icons">
-                    <h2 class="disappear clear">media stuff</h2>
+                    <h2 class="disappear">media stuff</h2>
                     <a href="https://twitter.com/trionsupercars"><img src="/images/x_logo.png" alt="X, Formerly Twitter, Logo"></a>
                     <a href="https://www.instagram.com/trionsupercarsgroup/"><img src="/images/instagram_logo.png" alt="Instagram Logo"></a>
                     <a href="https://www.facebook.com/richard.patterson.9041/"><img src="/images/facebook_logo.png" alt="Facebook Logo"></a>
@@ -114,8 +116,5 @@
             <a href="/merchandise/cart.html"><h2>CART</h2></a>
         </section>
     </footer>
-    <aside class="to-top">
-        <a href="#top"><img src="/images/up-arrow.png" alt="Arrow To Top"></a>
-    </aside>
 </body>
 </html>

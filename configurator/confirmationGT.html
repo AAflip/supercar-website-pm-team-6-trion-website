@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="app.css">
-    <script src="carting.js"></script>
-    <title>Trion Supercar Selector</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/app.css">
+    <title>See the Final Car</title>
+    <script>
+        function pictureChange1()
+            {
+            document.getElementById('carImage').src="/images/Group-43.png";
+            }
+        function pictureChange2()
+            {
+            document.getElementById('carImage').src="/images/Group-44.png";
+            }
+        function pictureChange3()
+            {
+            document.getElementById('carImage').src="/images/Group-45.png";
+            }
+    </script>
 </head>
-<body class="selectorBody">
+<body>
     <header>
         <nav>
             <ul id="desk-nav">
                 <li><a href="/"><img id="logo" src="/images/logo.png" alt="Trion Logo"></a></li>
                 <li><ul id="center">
-                    <li class="hoverer"><a class="button active" id="main-drop" href="/carSelector.html">Supercars</a>
+                    <li class="hoverer"><a class="button" id="main-drop" href="/carSelector.html">Supercars</a>
                         <ul class="dropdown">
                             <li><a class="button" href="/blackWidow.html">Black Widow</a></li>
                             <li><a class="button" href="/nemesisGT.html">Nemesis GT</a></li>
                             <li><a class="button" href="/nemesisRR.html">Nemesis RR</a></li>
                         </ul>
                     </li>
-                    <li><a class="button" href="/carSelectorCustom.html">Customizer</a></li>
+                    <li><a class="button active" href="/carSelectorCustom.html">Customizer</a></li>
                     <li><a class="button" href="/about.html">About Trion</a></li>
                     <li><a class="button" href="/merchandise/index.html">Merchandise</a></li>
                 </ul></li>
@@ -37,36 +50,28 @@
             </section>
         </nav>
     </header>
-    <main class="selectorMain">
-        <h1 id="carSelectorHeading">Meet the Supercars</h1>
-        <hr>
-        <section class="cars">
-            <h6 class="disappear">Trion Cars</h6>
-            <div >
-                <a href="/blackWidow.html"><img class="selection" src="/images/blackwidow-maybe.jpg" alt="Orange Black Widow car."></a>
-                <article class="selectionText">
-                    <h2>Black Widow</h2>
-                    <p>See the next generation of all-electric racing technology.</p>
-                </article>
-            </div>
-            <div>
-                <a href="/nemesisGT.html" id="nemesisGT"><img class="selection" src="/images/7_25-Lux-Black-Nemesis_rr-crop-1024x682.png" alt="Back of a Nemesis GT car."></a> 
-                <article class="selectionText">
-                    <h2>Nemesis GT</h2>
-                    <p>Drive in the future of all-electric luxury.</p>
-                </article>
-            </div>
-            <div class="nemesisRR">
-                <a href="/nemesisRR.html"><img class="selection" src="/images/yellow-1024x682.png" alt="Orange Black Widow car."></a>
-                <article class="selectionText">
-                    <h2>Nemesis RR</h2>
-                    <p>Witness one of the most powerful luxury vehicles on the market.</p>
-                </article>
-            </div>
+    <main class="confirmation">
+
+        <section class="confirmImage">
+            <h2 class="disappear">Confirmation Image</h2>
+            <img id="carImage" src="/images/Group-43.png" alt="Customized Car Preview">
+            <form>
+                <input type="button" id="frontButton" value="1" onclick="pictureChange1()">
+                <input type="button" id="sideButton" value="2" onclick="pictureChange2()">
+                <input type="button" id="backButton" value="3" onclick="pictureChange3()">
+            </form>
         </section>
 
 
+        <section class="confirmInfo">
+            <h1>Your Nemesis GT</h1>
+            <hr>
+            <p>Your Nemesis GT has been finished. If you want to go back and customize it, click the button below. Otherwise, you can copy your unique code and send it to a Trion Supercars dealership.</p>
+            <a href="/configurator/configGT.html" class="button">Back to Configuration</a>
+            <a href="/" class="button">Find Local Dealerships</a>
+            <a href="/" class="button">Send Confirmation Email</a>
 
+        </section>
     </main>
     <footer>
         <section id="desk-footer">

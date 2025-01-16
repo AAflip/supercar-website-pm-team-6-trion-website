@@ -3,6 +3,32 @@
 *{
     font-family: "Kulim Park", sans-serif;
 }
+.red {
+    background-color: #FF0000;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.blue {
+    background-color: blue;
+    color: #f5f5f5;
+}
+
+.purple {
+    background-color: purple;
+    color: #f5f5f5;
+}
+
+.yellow  {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+    color: #f5f5f5;
+}
 
 body{
     margin: 0;
@@ -631,10 +657,19 @@ p {
     border: 3px solid #FCC900; 
     font-size: 30px;
     align-self: center;
-    width: 6em;
+    width: 11em;
     justify-content: center;
     margin-top: 2em;
 }
+
+.confirmInfo h1 {
+    font-size: 55px;
+}
+
+.confirmInfo p {
+    font-size: 25px;
+}
+
 
 #sideButton:hover, #frontButton:hover, #backButton:hover {
     background-color: #12143b;
@@ -1875,10 +1910,10 @@ margin-right: 1em;
         margin: 0;
     }
     #config-bar{
-        width: 100%;
+        width: 99.25%;
     }
     .confirmInfo{
-        margin-bottom: 3em;
+        margin-bottom: 7em;
         width: 80%
     }
     .confirmImage img{
@@ -1946,6 +1981,13 @@ margin-right: 1em;
     }
     #trionLogoBottom {
         visibility: hidden;
+    }
+    .nemesisRR {
+        margin-bottom: 5em;
+    }
+
+    #confirm-config {
+        margin-bottom: 2em;;
     }
 
 }
