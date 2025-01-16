@@ -167,6 +167,7 @@ window.onload = function(){
     if(window.location.pathname == "/configurator/config.html"){
         getColors();
     }
+
         // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') !== null) {
         let cartButtons = document.querySelectorAll('.addToCart');
@@ -184,3 +185,33 @@ window.onload = function(){
     // Log shop object to console
     console.log("Ready", shop.cart);
 }
+
+// customizer diagonal resizing
+function diagonalSizer(){
+    let pi = Math.PI;
+    let arct = Math.atan(innerHeight/innerWidth);
+    let degs = 90 - (arct * (180/pi));
+    let option = [];
+    let rotate = [];
+    let text = [];
+    option = document.getElementsByClassName("option");
+    rotate = document.getElementsByClassName("rotate");
+    // document.styleSheets[0].insertRule('.option:after',`transform: skewX(${degs-1}deg);`);
+    if(window.screen.width > 1400){
+        for (var i = 0; i < option.length; i++){
+            option[i].style.transform = `skewX(-${degs+1}deg)`;
+            rotate[i].style.transform = `skewX(${degs}deg)`;
+        }
+    }else{
+        for (var i = 0; i < option.length; i++){
+            option[i].style.transform = "skewX(0deg)";
+            rotate[i].style.transform = "skewX(0deg)";
+        }
+    }
+}
+
+window.onresize = function(){
+    if(window.location.pathname == "/configurator/choice.html"){
+        diagonalSizer();
+    }
+};

@@ -502,7 +502,7 @@ p {
 .card img{
     border-radius: 50px;
     border: 3px solid #FCC900;
-    width: 30%;
+    width: 35%;
     height: 40vh;
     object-fit: cover;
 }
@@ -894,7 +894,8 @@ h6 {
     border: 3px solid #FCC900;
     border-radius: 10px;
     margin-bottom: 4em;
-    margin-left: 1em;
+    overflow: hidden;
+    min-width: 200px;
 }
 
 .merch p, a{
@@ -909,17 +910,14 @@ h6 {
 }
 
 .merch img{
-    width: 15vw;
+    width: 100%;
+    object-fit: cover;
     max-width: 500px;
     max-height: 300px;
     height: 20vh;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 1px solid black;
-}
-
-.merch:nth-child(1), .merch:nth-child(4), .merch:nth-child(7){
-    margin-left: 0;
 }
 
 .merch:hover{
@@ -1433,10 +1431,11 @@ button:focus{
 .previousItem {
     display: flex;
     background-color: #f5f5f5;
-    width: fit-content;
+    width: 100%;
     margin-top: 2em;
     border: 3px solid #CCA300;
     border-radius: 15px;
+    justify-content: space-between;
 }
 
 .previousItem img {
@@ -1447,7 +1446,7 @@ button:focus{
 }
 
 .previousItem article {
-margin-right: 1em;
+    margin-right: 6vw;
 }
 
 .previousItem article p{
@@ -1463,8 +1462,9 @@ margin-right: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 60vw;
+    max-width: 45vw;
     margin-bottom: 2em;
+    min-width: 430px;
 }
 
 .historyMain h2 {
@@ -1734,6 +1734,51 @@ margin-right: 1em;
         margin: 0.5em 1em;
         position: unset;
     }
+    #product-main{
+        flex-direction: column;
+    }
+    #product-main > img{
+        margin: 0 0 2em 0;
+        width: 99%;
+    }
+    #product-stuff{
+        margin-left: 2em;
+    }
+}
+
+#cart-main > div{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 1300px){
+    #purchase{
+        position: unset;
+    }
+    #cart-stuff{
+        width: 100%;
+        margin-right: 0;
+    }
+    #cart-main > div{
+        width: 75%;
+        margin-right: 0;
+    }
+    #carty-cart{
+        width: 100%;
+    }
+    .cart-item{
+        max-height: none;
+        /* width: 100%; */
+        max-width: none;
+    }
+    .cart-item img{
+        min-width: 30vw;
+        max-width: 350px;
+        margin: 1em 2em;
+        max-height: 360px;
+        border-radius: 8px;
+
+    }
 }
 
 @media screen and (max-width: 1600px){
@@ -1841,6 +1886,7 @@ margin-right: 1em;
     }
     .card-text, .card-right .card-text{
         margin: 0 0 0 1em;
+        padding-left: 0;
         max-width: 550px;
     }
     .card-right{
@@ -1878,11 +1924,20 @@ margin-right: 1em;
     }
     #products{
         flex-direction: column;
+        width: 98%;
     }
     .merch{
-        width: fit-content;
+        max-width: none;
+        max-height: none;
+        height: 100%;
+        width: 100%;
+    }
+    .merch a{
+        max-width: none;
+        max-height: none;
     }
     .merch img{
+        height: 50vh;
         width: 100%;
     }
     #product-main{
@@ -1895,11 +1950,6 @@ margin-right: 1em;
     }
     #purchase{
         position: unset;
-    }
-    .cart-item{
-        margin-right: 0;
-        margin-left: 10em;
-        padding-right: 5em;
     }
     #config-main{
         flex-direction: column;
