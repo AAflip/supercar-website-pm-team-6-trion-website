@@ -1641,6 +1641,10 @@ button:focus{
     font-weight: 500;
 }
 
+h2.prodPrice::before {
+    content: '$';
+}
+
 #mobile-nav{
     background-color: #3F3F4C;
     display: flex;

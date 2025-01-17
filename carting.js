@@ -33,6 +33,7 @@ function addToCart(e) {
     e.preventDefault();
     // get the product attributes from DOM
     let product = e.target.parentElement.children;
+    console.log(product);
     // create an array to hold product attributes
     let attributes = ['name', 'desc', 'price', 'imgSrc'];
     // loop through the product attributes and assign them to the array
@@ -40,8 +41,9 @@ function addToCart(e) {
         if (node.className === nameClass) attributes[0] = node.innerText;
         if (node.className === descClass) attributes[1] = node.innerText;
         if (node.className === priceClass) attributes[2] = parseFloat(node.innerText);
-        if (node.className === imageClass) attributes[3] = node.currentSrc;
+        // if (node.className === imageClass) attributes[3] = node.currentSrc;
     }
+    attributes[3] = document.getElementById('prodImage').currentSrc;
     // check if any attributes are undefined
     if (attributes.includes(undefined)) {
         console.log("Error: One or more attributes are undefined, check your class names");
@@ -154,19 +156,19 @@ function emptyCart() {
 }
 
 //button color stuff
-function getColors(){
-    let buttonColors = [];
-    buttonColors = document.getElementsByClassName('colors-options');
-    for (var i = 0; i < buttonColors.length; i++){
-        let x = buttonColors[i].getAttribute("data-col");
-        buttonColors[i].style.background = x;
-    }
-}
+// function getColors(){
+//     let buttonColors = [];
+//     buttonColors = document.getElementsByClassName('colors-options');
+//     for (var i = 0; i < buttonColors.length; i++){
+//         let x = buttonColors[i].getAttribute("data-col");
+//         buttonColors[i].style.background = x;
+//     }
+// }
 
-window.onload = function(){
-    if(window.location.pathname == "/configurator/config.html"){
-        getColors();
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    // if(window.location.pathname == "/configurator/config.html"){
+    //     getColors();
+    // }
 
         // check if addToCart buttons exist
     if (document.querySelectorAll('.addToCart') !== null) {
@@ -184,31 +186,31 @@ window.onload = function(){
 
     // Log shop object to console
     console.log("Ready", shop.cart);
-}
+})
 
 // customizer diagonal resizing
-function diagonalSizer(){
-    let pi = Math.PI;
-    let arct = Math.atan(innerHeight/innerWidth);
-    let degs = 90 - (arct * (180/pi));
-    let option = [];
-    let rotate = [];
-    let text = [];
-    option = document.getElementsByClassName("option");
-    rotate = document.getElementsByClassName("rotate");
-    // document.styleSheets[0].insertRule('.option:after',`transform: skewX(${degs-1}deg);`);
-    if(window.screen.width > 1400){
-        for (var i = 0; i < option.length; i++){
-            option[i].style.transform = `skewX(-${degs+1}deg)`;
-            rotate[i].style.transform = `skewX(${degs}deg)`;
-        }
-    }else{
-        for (var i = 0; i < option.length; i++){
-            option[i].style.transform = "skewX(0deg)";
-            rotate[i].style.transform = "skewX(0deg)";
-        }
-    }
-}
+// function diagonalSizer(){
+//     let pi = Math.PI;
+//     let arct = Math.atan(innerHeight/innerWidth);
+//     let degs = 90 - (arct * (180/pi));
+//     let option = [];
+//     let rotate = [];
+//     let text = [];
+//     option = document.getElementsByClassName("option");
+//     rotate = document.getElementsByClassName("rotate");
+//     // document.styleSheets[0].insertRule('.option:after',`transform: skewX(${degs-1}deg);`);
+//     if(window.screen.width > 1400){
+//         for (var i = 0; i < option.length; i++){
+//             option[i].style.transform = `skewX(-${degs+1}deg)`;
+//             rotate[i].style.transform = `skewX(${degs}deg)`;
+//         }
+//     }else{
+//         for (var i = 0; i < option.length; i++){
+//             option[i].style.transform = "skewX(0deg)";
+//             rotate[i].style.transform = "skewX(0deg)";
+//         }
+//     }
+// }
 
 // window.onresize = function(){
 //     if(window.location.pathname == "/configurator/choice.html"){
