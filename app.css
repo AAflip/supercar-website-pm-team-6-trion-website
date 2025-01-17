@@ -250,13 +250,13 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99.72%;
     background-color: #2C2C2C;
     border: 3px solid #FCC900;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-top: -1.3em;
     margin-bottom: 1em;
+    max-width: 80vw;
 }
 
 .cars article p {
